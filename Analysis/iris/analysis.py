@@ -1,6 +1,6 @@
 import pandas as pd
 
-with open('./Raw-Data-Files/iris/iris.data') as raw:
+with open('/Raw-Data-Files/iris/iris.data') as raw:
     data = raw.read().splitlines()
 
 data[0:5]
