@@ -16,6 +16,20 @@
         a response variable of closing price of LCID on each day, and
         predictor variables were closing price on each of the 5 days 
         preceding the current day.
+      
+        I then implemented a binary coding of each variable:
+        <ul>
+          <li> 0 - meaning the price of that day is lower than the previous day </li>
+          <li> 1 - meaning the price of that day is higher than the previous day </li>
+        </ul>
+        
+        My final logistic model thus had 4 predictors & 1 response variable
+      
+        I found the model had a <b>58% True Negative Accuracy</b> on both the training data
+        and the entire dataset. However, the model poorly predicted Positives. 
+        
+        <b> If one were to make decisions based on this model, a Negative prediction is certainly 
+          more confident than a Positive prediction. </b> Perhaps shorting the stock on such predictions is the play.
       </p>
     </section>
   </body>
