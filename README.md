@@ -7,3 +7,4 @@ Projects:
   - Data set found here: https://archive.ics.uci.edu/ml/machine-learning-databases/iris/
 - Stock Price Action Analysis
   - ABML 
+  - LCID
