@@ -97,3 +97,20 @@ pp = model.predict_proba(X)[::,1]
 fpr,tpr,_ = metrics.roc_curve(Y,pp)
 auc = metrics.roc_auc_score(Y,pp)
 plt.plot(fpr,tpr)
+
+#training on entire data set
+modelf = LogisticRegression()
+modelf.fit(X,Y)
+
+pred = modelf.predict(X)
+mat = metrics.confusion_matrix(Y,pred)
+
+cm = metrics.ConfusionMatrixDisplay(mat,['down','up'])
+cm.plot()
+
+pp = modelf.predict_proba(X)[::,1]
+fpr,tpr,_ = metrics.roc_curve(Y,pp)
+auc = metrics.roc_auc_score(Y,pp)
+plt.plot(fpr,tpr)
+(112+15)
+84+17
