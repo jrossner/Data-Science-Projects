@@ -5,7 +5,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 
-with open('/Raw-Data-Files/iris/iris.data') as raw:
+with open('/resources/iris.data') as raw:
     data = raw.read().splitlines()
 
 data[0:5]
