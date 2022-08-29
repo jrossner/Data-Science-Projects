@@ -8,3 +8,6 @@ Projects:
 - Stock Price Action Analysis
   - ABML 
   - LCID
+- Brain Tumor Detection
+  - Using neural network(s)
+  - Data set found here: https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection?resource=download
