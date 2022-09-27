@@ -31,5 +31,5 @@ ax.vlines(mean(rypa),min(pypa)-.1,max(pypa)+.15,'orange')
 ax.text(max(rypa)+.25,lap,"League Average Pass Y/A",ha='center',va='center',rotation=270)
 for i, team in enumerate(abb):
     ax.annotate(team, (rypa[i],pypa[i]+0.075))
-fig.savefig('/Volumes/GoogleDrive/My Drive/a.png')
+fig.savefig('/nfl-graph.png')
 fig.show()
