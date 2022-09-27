@@ -3,7 +3,6 @@ from statistics import mean
 
 rypa = [4.5,4.9,5.6,4.7,4.7,5.4,3.3,5,4.7,4.2,5.9,4.7,3.6,4,4.1,4.1,2.6,3.4,4.5,3.3,4.9,4.3,5.5,5.6,4.4,4.4,4.1,4.5,4,3.4,3.5,3.7]
 pypa = [5.5,8.1,8.5,7.6,6.8,6.6,6.5,6.5,6.2,7,6.7,7.6,6.2,6.6,7,7.8,7.2,7.5,7.1,9,6.4,8.1,7.5,6.1,5.9,9.3,5.5,6.9,7,6.5,7.8,6.6]
-teams = ["Arizona","Atlanta","Baltimore","Buffalo","Carolina","Chicago","Cincinnati","Cleveland","Dallas","Denver","Detroit","Green Bay","Houston","Indianapolis","Jacksonville","Kansas City","LA Chargers","LA Rams","Las Vegas","Miami","Minnesota","New England","New Orleans","NY Giants","NY Jets","Philadelphia","Pittsburgh","San Francisco","Seattle","Tampa Bay","Tennessee","Washington"]
 abb = ["ARI","ATL","BAL","BUF","CAR","CHI","CIN","CLE","DAL","DEN","DET","GB","HOU","IND","JAC","KC","LV","LAC","LAR","MIA","MIN","NE","NO","NYG","NYJ","PHI","PIT","SF","SEA","TB","TEN","WAS"]
 
 colors = []
@@ -31,5 +30,5 @@ ax.vlines(mean(rypa),min(pypa)-.1,max(pypa)+.15,'orange')
 ax.text(max(rypa)+.25,lap,"League Average Pass Y/A",ha='center',va='center',rotation=270)
 for i, team in enumerate(abb):
     ax.annotate(team, (rypa[i],pypa[i]+0.075))
-fig.savefig('/nfl-graph.png')
+fig.savefig('nfl-graph.png')
 fig.show()
