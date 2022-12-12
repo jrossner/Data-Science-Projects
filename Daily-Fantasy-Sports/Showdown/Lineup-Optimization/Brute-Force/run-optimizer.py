@@ -12,7 +12,7 @@ raw_clean = raw[raw["salary"] > 2000]
 players = list(raw_clean["player"].unique())
 dset = pd.DataFrame({"player": [], "points": [], "salary": [], "capt. salary": [], "capt. points": []})
 for player in players:
-    d = arine[arine["player"] == player].sort_values(by = ["salary"],ascending = False).reset_index(drop=True)
+    d = raw_clean[raw_clean["player"] == player].sort_values(by = ["salary"],ascending = False).reset_index(drop=True)
     dset.loc[len(dset)] = [player, d["points"][1], d["salary"][1], d["salary"][0], d["points"][0]*1.5]
     
 
