@@ -23,7 +23,7 @@ def pickLineup(data, budget = 50000, num_utility = 5):
                     lineup_total = c_points + sum(lineup_data["points"])
                     lineup_salary = c_salary + sum(lineup_data["salary"])
                     print("found a better line up")
-                    best_lineup = best_lineup.append({"players": [capt]+list(lineup_data["player"]),
+                    best_lineups = best_lineups.append({"players": [capt]+list(lineup_data["player"]),
                                     "total": lineup_total, "salary": lineup_salary,
                                     "captain": capt})
     
