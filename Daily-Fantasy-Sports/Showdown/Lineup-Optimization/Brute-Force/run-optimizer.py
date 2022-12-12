@@ -10,7 +10,7 @@ arine = pd.DataFrame({"player": d["Name"], "capt. salary": d["Salary"], "points"
 arine["capt. points"] = [ p * 1.5 for p in arine["points"]]
 arine["salary"] = [ s / 1.5 for s in arine["capt. salary"]]
 
-out = ["Rondale Moore","Jakobi Meyers","Brian Hoyer", "Quinn Nordin"]
+out = ["Rondale Moore","Jakobi Meyers","Brian Hoyer", "Quinn Nordin","Bailey Zappe"]
 arine = arine[~arine["player"].isin(out)].reset_index(drop=True)
 arine_clean = arine[arine["salary"] > 2000]
 
