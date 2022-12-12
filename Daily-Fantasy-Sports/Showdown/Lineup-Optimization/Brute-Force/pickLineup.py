@@ -3,6 +3,7 @@ from itertools import combinations as comb
 
 def pickLineup(data, budget = 50000, num_utility = 5):
     best_lineups = [{"players": [], "total": 0, "salary": 0, "captain": None}]
+    print(best_lineups)
     data = data.sort_values(by=["points"],ascending=False).reset_index()
 
     for i in range(10):
@@ -12,7 +13,6 @@ def pickLineup(data, budget = 50000, num_utility = 5):
         remaining = budget - data["capt. salary"][i]
 
         rems = data.drop([i]).reset_index(drop=True)
-        print(f'For Capt {i}: {capt}, look: {rems.head(10)}')
         utility_lineups = list(comb(rems["player"], num_utility))
         
         for lineup in utility_lineups:
@@ -24,9 +24,9 @@ def pickLineup(data, budget = 50000, num_utility = 5):
                         lineup_total = c_points + sum(lineup_data["points"])
                         lineup_salary = c_salary + sum(lineup_data["salary"])
                         print("found a better line up")
-                        best_lineups = best_lineups.append({"players": [capt]+list(lineup_data["player"]),
-                                        "total": lineup_total, "salary": lineup_salary,
-                                        "captain": capt})
+                        best_lineups.append({"players": [capt]+list(lineup_data["player"]),
+                                                "total": lineup_total, "salary": lineup_salary,
+                                                "captain": capt})
                 except:
                     print(f'best: {best_lineups}')
     
