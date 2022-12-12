@@ -1,7 +1,6 @@
 name: brute-force-lineup-optimizer
 
 on:
-  schedule: 
   workflow_dispatch:
   
 jobs:
