@@ -19,7 +19,7 @@ def pickLineup(data, budget = 50000, num_utility = 5):
             lineup = list(lineup)
             lineup_data = rems[rems["player"].isin(lineup)]
             if c_salary + sum(lineup_data["salary"]) <= remaining:
-                if c_points + sum(lineup_data["points"]) > best_lineups["total"][-1]:
+                if c_points + sum(lineup_data["points"]) > best_lineups[-1]["total"]:
                     lineup_total = c_points + sum(lineup_data["points"])
                     lineup_salary = c_salary + sum(lineup_data["salary"])
                     print("found a better line up")
