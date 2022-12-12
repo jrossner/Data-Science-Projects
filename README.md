@@ -11,3 +11,6 @@ Projects:
 - Brain Tumor Detection
   - Using neural network(s)
   - Data set found here: https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection?resource=download
+- Daily Fantasy Sports (Captain-Showdown) Lineup Optimizer
+  - Tailored to Draft Kings
+  - Brute-Force function, looking to optimize
