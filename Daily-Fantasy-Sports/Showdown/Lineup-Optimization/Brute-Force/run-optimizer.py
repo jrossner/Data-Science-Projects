@@ -7,4 +7,4 @@ arine["capt. points"] = [ p * 1.5 for p in arine["points"]]
 arine["capt. salary"] = [ s * 1.5 for s in arine["salary"]]
 arine_2000 = arine[arine["salary"] > 1900]
 
-print(f'Chosen Lineup: {pickLineup(arine_2000,budget=50000,num_utility=5)')
+print(f'Chosen Lineup: {pickLineup(arine_2000,budget=50000,num_utility=5)}')
