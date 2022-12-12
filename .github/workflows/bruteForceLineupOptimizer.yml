@@ -18,7 +18,5 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install pandas
           python -m pip install itertool
-      - name: execute python script
-        env:
-          
+      - name: execute python script  
         run: python Daily-Fantasy-Sports/Showdown/Lineup-Optimization/Brute-Force/run-optimizer.py
