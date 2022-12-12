@@ -27,7 +27,7 @@ def pickLineup(data, budget = 50000, num_utility = 5):
                         best_lineups = best_lineups.append({"players": [capt]+list(lineup_data["player"]),
                                         "total": lineup_total, "salary": lineup_salary,
                                         "captain": capt})
-                 except:
+                except:
                     print(f'best: {best_lineups}')
     
     best_lineups = sorted(best_lineups, key=lambda d: d['total']) 
