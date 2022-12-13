@@ -6,7 +6,7 @@ def pickLineup(data, budget = 50000, num_utility = 5):
     print(best_lineups)
     data = data.sort_values(by=["points"],ascending=False).reset_index()
 
-    for i in range(20):
+    for i in range(len(data)):
         capt = data["player"][i]
         c_salary = data["capt. salary"][i]
         c_points = data["capt. points"][i]
