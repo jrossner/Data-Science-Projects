@@ -3,7 +3,6 @@ from itertools import combinations as comb
 
 def pickLineup(data, budget = 50000, num_utility = 5):
     best_lineups = [{"players": [], "total": 0, "salary": 0, "captain": None}]
-    print(best_lineups)
     data = data.sort_values(by=["points"],ascending=False).reset_index()
 
     for i in range(len(data)):
@@ -26,6 +25,6 @@ def pickLineup(data, budget = 50000, num_utility = 5):
                                             "total": lineup_total, "salary": lineup_salary,
                                             "captain": capt})
 
-    best_lineups = sorted(best_lineups, key=lambda d: d['total'], reverse=True)
+    best_lineups = sorted(best_lineups, key=lambda d: d['total'], reverse=True)[0:5]
 
     return best_lineups
