@@ -5,7 +5,7 @@ from os import listdir
 d = pd.read_csv("Daily-Fantasy-Sports/Showdown/Lineup-Optimization/Brute-Force/data/DKSalaries.csv")
 
 raw = pd.DataFrame({"player": d["Name"], "salary": d["Salary"], "points": d["AvgPointsPerGame"]})
-out = ["Rondale Moore","Jakobi Meyers","Brian Hoyer", "Quinn Nordin","Bailey Zappe"]
+out = ["Rondale Moore","Jakobi Meyers","Brian Hoyer", "Quinn Nordin","Bailey Zappe","Colt McCoy"]
 raw = raw[~raw["player"].isin(out)].reset_index(drop=True)
 
 players = list(raw["player"].unique())
