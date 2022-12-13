@@ -2,7 +2,7 @@ from pickLineup import pickLineup
 import pandas as pd
 from os import listdir
 
-d = pd.read_csv("Daily-Fantasy-Sports/Showdown/Lineup-Optimization/Brute-Force/data/phi/sac.csv")
+d = pd.read_csv("Daily-Fantasy-Sports/Showdown/Lineup-Optimization/Brute-Force/data/phi:sac.csv")
 
 raw = pd.DataFrame({"player": d["Name"], "salary": d["Salary"], "points": d["AvgPointsPerGame"]})
 out = ["Alex Len","Tyrese Maxey"]
