@@ -6,7 +6,7 @@ def pickLineup(data, budget = 50000, num_utility = 5):
     print(best_lineups)
     data = data.sort_values(by=["points"],ascending=False).reset_index()
 
-    for i in range(10):
+    for i in range(20):
         capt = data["player"][i]
         c_salary = data["capt. salary"][i]
         c_points = data["capt. points"][i]
@@ -22,7 +22,6 @@ def pickLineup(data, budget = 50000, num_utility = 5):
                 if c_points + sum(lineup_data["points"]) > best_lineups[-1]["total"]:
                     lineup_total = c_points + sum(lineup_data["points"])
                     lineup_salary = c_salary + sum(lineup_data["salary"])
-                    print("found a better line up")
                     best_lineups.append({"players": [capt]+list(lineup_data["player"]),
                                             "total": lineup_total, "salary": lineup_salary,
                                             "captain": capt})
