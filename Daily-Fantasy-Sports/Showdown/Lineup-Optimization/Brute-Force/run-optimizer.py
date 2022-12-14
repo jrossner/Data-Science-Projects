@@ -22,5 +22,7 @@ for player in players:
 print("Filtering out players below minimnum salary...")
 dset = dset[dset["salary"] > 100]
 
+print(f'There are {len(dset)} players to chose from'...)
+
 print("Starting optimized picker...")
 print(f'Chosen Lineup: {pickLineup(dset,budget=50000,num_utility=5)}')
