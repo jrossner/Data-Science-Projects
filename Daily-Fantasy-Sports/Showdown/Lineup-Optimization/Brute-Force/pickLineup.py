@@ -25,6 +25,6 @@ def pickLineup(data, budget = 50000, num_utility = 5):
                                          "total": lineup_total, "salary": lineup_salary,
                                          "captain": capt})
 
-    best_lineups = sorted(best_lineups, key=lambda d: d['total'], reverse=True)[0:5]
+    #best_lineups = sorted(best_lineups, key=lambda d: d['total'], reverse=True)[0:5]
 
     return best_lineups
