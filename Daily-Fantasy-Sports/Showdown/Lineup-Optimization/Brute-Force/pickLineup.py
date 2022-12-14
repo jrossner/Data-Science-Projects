@@ -22,8 +22,8 @@ def pickLineup(data, budget = 50000, num_utility = 5):
                     lineup_total = c_points + sum(lineup_data["points"])
                     lineup_salary = c_salary + sum(lineup_data["salary"])
                     best_lineups.append({"players": [capt]+list(lineup_data["player"]),
-                                            "total": lineup_total, "salary": lineup_salary,
-                                            "captain": capt})
+                                         "total": lineup_total, "salary": lineup_salary,
+                                         "captain": capt})
 
     best_lineups = sorted(best_lineups, key=lambda d: d['total'], reverse=True)[0:5]
 
