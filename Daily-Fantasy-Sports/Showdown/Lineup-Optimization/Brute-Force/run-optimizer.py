@@ -3,13 +3,13 @@ import pandas as pd
 from os import listdir
 
 print("Reading data file...")
-d = pd.read_csv("Daily-Fantasy-Sports/Showdown/Lineup-Optimization/Brute-Force/data/phi:sac.csv")
+d = pd.read_csv("Daily-Fantasy-Sports/Showdown/Lineup-Optimization/Brute-Force/data/gsw-ind.csv")
 
 print("Shaping data...")
 raw = pd.DataFrame({"player": d["Name"], "salary": d["Salary"], "points": d["AvgPointsPerGame"]})
 
 print("Filtering out ineligible players...")
-out = ["Alex Len","Tyrese Maxey"]
+out = ["Andrew Wiggins", "Chris Duarte", "Kendall Brown", "Daniel Theis","Andre Iguodala"]
 raw = raw[~raw["player"].isin(out)].reset_index(drop=True)
 
 print("Assembling players...")
